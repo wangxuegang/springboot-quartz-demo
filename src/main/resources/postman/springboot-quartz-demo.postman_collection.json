@@ -1,0 +1,231 @@
+{
+	"id": "6f04e771-78df-3c57-3645-9eb02a52594f",
+	"name": "springboot-quartz-demo",
+	"description": "",
+	"order": [
+		"463ca09e-842b-af22-589b-332f174e4869",
+		"e557a6e1-d796-5673-1030-bf01d212a605",
+		"f3e3d9c9-bc0b-670c-578b-80788c0737bb",
+		"111b1c00-5e73-056a-4908-ed8ff4e16dd7",
+		"501e2905-f546-6863-1924-b8d6550a7e95",
+		"34d7ed70-7b9b-5654-c1d5-f22791084b23",
+		"c9587957-190c-752a-2152-e4b095fd22fa"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1616643277705,
+	"owner": "10843241",
+	"public": false,
+	"requests": [
+		{
+			"id": "111b1c00-5e73-056a-4908-ed8ff4e16dd7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/trigger",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616653017927,
+			"name": "触发任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo\",\n\t\"jobGroup\":\"demo\"\n}"
+		},
+		{
+			"id": "34d7ed70-7b9b-5654-c1d5-f22791084b23",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/resume",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616652100293,
+			"name": "恢复任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo\",\n\t\"jobGroup\":\"demo\"\n}"
+		},
+		{
+			"id": "463ca09e-842b-af22-589b-332f174e4869",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/add",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616652584284,
+			"name": "新增任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo1\",\n\t\"jobGroup\":\"demo1\",\n\t\"jobClassName\":\"com.wangxuegang.job.impl.DemoJobImpl\",\n\t\"cronExpression\":\"*/5 * * * * ?\",\n\t\"description\":\"demo1\"\n}"
+		},
+		{
+			"id": "501e2905-f546-6863-1924-b8d6550a7e95",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/pause",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616652095145,
+			"name": "停止任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo\",\n\t\"jobGroup\":\"demo\"\n}"
+		},
+		{
+			"id": "c9587957-190c-752a-2152-e4b095fd22fa",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/remove",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616652616154,
+			"name": "移除任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo1\",\n\t\"jobGroup\":\"demo1\"\n}"
+		},
+		{
+			"id": "e557a6e1-d796-5673-1030-bf01d212a605",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/add",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616653195436,
+			"name": "修改任务",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"demo\",\n\t\"jobGroup\":\"demo\",\n\t\"jobClassName\":\"com.wangxuegang.job.impl.DemoJobImpl\",\n\t\"cronExpression\":\"*/1 * * * * ?\",\n\t\"description\":\"demo\",\n\t\"oldJobName\": \"demo\",\n    \"oldJobGroup\": \"demo\"\n}"
+		},
+		{
+			"id": "f3e3d9c9-bc0b-670c-578b-80788c0737bb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/springboot-quartz-demo/job/list",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1616651909548,
+			"name": "任务列表",
+			"description": "",
+			"collectionId": "6f04e771-78df-3c57-3645-9eb02a52594f",
+			"responses": [],
+			"rawModeData": "{\n\t\"jobName\":\"\",\n\t\"jobGroup\":\"\",\n\t\"pageNo\":1,\n\t\"pageSize\":10\n}"
+		}
+	]
+}

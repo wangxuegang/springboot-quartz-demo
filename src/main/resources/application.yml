@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /springboot-quartz-demo
+  session-timeout: 60
+  tomcat:
+    max-threads: 100
+    uri-encoding: UTF-8
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/quartz?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            clusterCheckinInterval: 10000
+            dataSource: quartzDataSource
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            isClustered: true
+            tablePrefix: QRTZ_
+            useProperties: true
+          scheduler:
+            instanceId: AUTO
+            instanceName: clusteredScheduler
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
